@@ -1,12 +1,33 @@
 
+//IIFE
+let pokemonRespository = (function () {
 let pokemonList = [
     {name: 'Charmander', height: 0.6, type: 'fire'},
     {name: 'Squirtle', height: 0.5,type: 'water'},
     {name: 'Jigglypuff', height: 0.5,type: ['fairy', 'normal']}
 ];
+function getAll(){
+    return pokemonList;
+}
+function add(pokemon){
+    pokemonList.push(pokemon);
+}
+
+return{
+add: add,
+getAll: getAll
+}
+})();
+
+
+//When adding more pokemons to the list 
+//pokemonRespository.add({name: '', height: '' ,  type: '  '})
+
+
+
 //forEach loop looping through pokemonList
-pokemonList.forEach(function (entry) {
-document.write(entry.name + ' ' + (entry.height) );
+pokemonRespository.getAll().forEach(function (entry) {
+document.write(entry.name + ' ' + entry.height );
 if (entry.height >= 0.6){
     document.write(' Wow! That´s big!');
 } 
