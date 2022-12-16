@@ -4,7 +4,7 @@ let pokemonList = [
     {name: 'Squirtle', height: 0.5,type: 'water'},
     {name: 'Jigglypuff', height: 0.5,type: ['fairy', 'normal']}
 ];
-
+//forEach loop looping through pokemonList
 pokemonList.forEach(function (entry) {
 document.write(entry.name + ' ' + (entry.height) );
 if (entry.height >= 0.6){
@@ -14,8 +14,7 @@ document.write ('<br>')
 });
   
 
-
-
+//for loop
 // for (let i = 0; i < pokemonList.length; i++){
 //     if (pokemonList[i].height >= 0.6){
 //        document.write(
