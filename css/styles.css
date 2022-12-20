@@ -1,0 +1,13 @@
+
+.button-pokemon{
+    border-color:#8FC0A9;
+    margin: 10px; 
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 3px;
+   font-size: 20px;
+   font-family: 'Martian Mono', 'sans-serif';
+   background-color: FAF3DD;
+   color: #696D7D; 
+   
+}
