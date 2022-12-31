@@ -1,13 +1,39 @@
+.body{
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 2;
+    background-color: rgb(216, 98, 98);
+} 
 
+ 
 .button-pokemon{
     border-color:#8FC0A9;
     margin: 10px; 
     padding: 10px;
     border-radius: 10px;
     border-width: 3px;
-   font-size: 20px;
+   font-size: 25px;
    font-family: 'Martian Mono', 'sans-serif';
    background-color: FAF3DD;
-   color: #696D7D; 
-   
+   color: #696D7D;  
 }
+
+.button-pokemon:hover{
+    background-color: #a4d2bc;
+    cursor: pointer;
+} 
+
+.pokemon-list{
+    list-style-type: none;
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+    margin: 20% auto;
+    padding: 20px;
+    width: 10px;  
+}
+
+
+
+
+
