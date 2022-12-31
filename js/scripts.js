@@ -1,9 +1,11 @@
 
+
+
 // PokemonList surrounded by an IIFE
 let pokemonRespository = (function () {
     // pokemonList defined as variable with 3 key values as objects in an array
 let pokemonList = [];
-let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20';
+let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=25';
 
 
 // function to add new pokemon to the pokemon list
@@ -16,7 +18,7 @@ function getAll(){
     return pokemonList;
 }
 
-//adding pokemon to the list witht he format of a button
+//adding pokemon to the list with the format of a button
 function addListItem(pokemon){
     let pokemonList= document.querySelector('.pokemon-list');
     let listItem = document.createElement('li');
@@ -64,8 +66,13 @@ function loadList() {
 function showDetails (item){
     pokemonRespository.loadDetails(item).then(function(){
         console.log(item);
+        
+  
     });
 }
+
+
+
 
 return{
 add: add,
