@@ -58,7 +58,8 @@ function loadList() {
       return response.json();
     }).then(function (details) {
       // Get height, weight etc of each pokemon from api
-      item.imageUrl = details.sprites.front_default;
+      item.imageUrlFront = details.sprites.front_default;
+      item.imageUrlBack = details.sprites.back_default;
       item.height = details.height;
       item.weight = details.weight;
       
@@ -85,12 +86,12 @@ function showDetails (item){
       titleElement.classList.add('pokemonName');
 
     let detailHeight = document.createElement('p');
-      detailHeight.innerText= item.height;
+      detailHeight.innerText= `height: ${item.height}`;
       detailHeight.classList.add('pokemonHeight');
       
 
     let detailWeight = document.createElement('p');
-      detailWeight.innerText= item.weight;
+      detailWeight.innerText= `weight: ${item.weight}`;
       detailWeight.classList.add('pokemonWeight');
 
     let closeButton = document.createElement ('button');
@@ -98,10 +99,16 @@ function showDetails (item){
       closeButton.innerHTML= '&times;';
       closeButton.addEventListener('click', hideModal);
 
+    let imageUrlBack= document.createElement('img');
+    imageUrlBack.src= item.imageUrlBack;
+    imageUrlBack.classList.add('imageUrlBack')
+
   
-    let detailImg = document.createElement('img');
-      detailImg.src = item.imageUrl;
-      detailImg.classList.add('pokemonImg');
+    let imageUrlFront = document.createElement('img');
+      imageUrlFront.src = item.imageUrlFront;
+      imageUrlFront.classList.add('imageUrlFront');
+
+    
 
 
     function hideModal(){
@@ -115,7 +122,8 @@ function showDetails (item){
     modal.appendChild(titleElement);
     modal.appendChild(detailHeight);
     modal.appendChild(detailWeight);
-    modal.appendChild(detailImg);
+    modal.appendChild(imageUrlFront);
+    modal.appendChild(imageUrlBack);
 
     modalContainer.classList.add('is-visible');
 
