@@ -1,6 +1,7 @@
 
 
 
+
 // PokemonList surrounded by an IIFE
 let pokemonRespository = (function () {
     // pokemonList defined as variable with 3 key values as objects in an array
@@ -65,12 +66,49 @@ function loadList() {
   }
 function showDetails (item){
     pokemonRespository.loadDetails(item).then(function(){
-        console.log(item);
-        
-  
+    let modalContainer = document.querySelector('#modal-container');
+   
+    // Clear all existing modal content
+    modalContainer.innerHTML = '';
+
+    //createElements to display pokemon info
+    let modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    let titleElement = document.createElement('h1');
+    titleElement.innerText = item.name;
+
+    let detailHeight = document.createElement('p');
+    detailHeight.innerText= item.height;
+
+    let closeBtn = document.createElement ('button');
+    closeBtn.classList.add('modal-close')
+    closeBtn.innerText= 'close';
+    closeBtn.addEventListener('click', hideModal);
+
+    function hideModal(){
+      let modalContainer = document.querySelector('#modal-container');
+      modalContainer.classList.remove('is-visible')
+    }
+   
+
+
+
+    
+   
+
+    
+    modal.appendChild(titleElement);
+    modal.appendChild(detailHeight);
+    modal.appendChild(closeBtn);
+    modalContainer.appendChild(modal);
+
+    modalContainer.classList.add('is-visible');
+    
+    
+
     });
 }
-
 
 
 
