@@ -1,38 +1,33 @@
-.body{
-    font-size: 50px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 2;
-    background-color: rgb(216, 98, 98);
-} 
-
- 
+body{
+    background-color: #f3f2ed;
+}
 .button-pokemon{
     border-color:#8FC0A9;
-    margin: 10px; 
-    padding: 10px;
+    margin: 30px; 
+    padding: 20px;
     border-radius: 10px;
-    border-width: 3px;
-   font-size: 25px;
-   font-family: 'Martian Mono', 'sans-serif';
-   background-color: FAF3DD;
-   color: #696D7D;  
+    border-width: 2.5px;
+    font-size: 20px;
+    font-family: 'Martian Mono', 'sans-serif';
+    background-color: FAF3DD;
+    color: #696D7D;  
+    
 }
 
 .button-pokemon:hover{
     background-color: #a4d2bc;
     cursor: pointer;
+    
 } 
 
 .pokemon-list{
     list-style-type: none;
-    display: flex;   
+    margin: 20px;
+    padding: 20px;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20% auto;
-    padding: 20px;
-    width: 10px;  
 }
-
 
 #modal-container{
     display: none;
@@ -51,33 +46,74 @@
     overflow: auto; /*allows for scrolling if the screen is not high enough*/
     display: flex; /* center the modal */
     flex-direction: center;
-   
 }
 
 .modal {
     margin: auto;
     display: inline-block;
     box-sizing: border-box;
-    background:  #c5e1d4;
-    border-color: #696D7D;
+    background:  #d5ebe1;
+    border: 2px solid #8c8f9e;
     border-radius: 10px;
     padding: 15px;
     width: 100%;
     max-width: 700px;
     text-align: left;
+    
 }
 
 .modal-close{
     float: right;
     color: #696D7D;
     border: none;
-    background: #c5e1d4;
-    font-size: 15px;
+    background: #d5ebe1;
+    font-size: 30px;
     cursor: pointer;
-    
 }
 
-/* .titleElement{
-    font-size: 80px;
+.title{
+    font-size: 60px;
+    font-family: 'Martian Mono', 'sans-serif';
+    color:#696D7D;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    text-decoration: overline #8FC0A9;
+}
 
-} */
+#catch-phrase{
+    display: flex;
+    justify-content: center;
+    font-family: 'East Sea Dokdo', 'sans-serif';
+    font-size: 25px;
+    color: #76b095;
+    }
+    
+.pokemonName{
+   font-size: 40px; 
+   font-family: 'Martian Mono', 'sans-serif';
+   color:#696D7D;
+   display: flex;
+   justify-content: center;
+}
+
+.pokemonHeight{
+    font-size: 22px;
+    font-family: 'Martian Mono', 'sans-serif';
+    color:#696D7D;
+}
+
+.pokemonWeight{
+    font-size: 22px;
+    font-family: 'Martian Mono', 'sans-serif';
+    color:#696D7D;
+}
+
+.imageUrlFront, .imageUrlBack{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%; 
+}
+
+
