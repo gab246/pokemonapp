@@ -78,7 +78,7 @@ function loadList() {
 function showDetailsModal (item){
   let modalTitle= $(".modal-title");
   let modalBody = $(".modal-body");
-  let modalButton = $("#button");
+  
   
   modalTitle.empty();
   modalBody.empty();
@@ -95,7 +95,6 @@ modalBody.append(detailHeight);
 modalBody.append(detailWeight);
 modalBody.append(imagefront);
 modalBody.append(imageBack);
-modalButton.append(imageFront);
 
 }
 
