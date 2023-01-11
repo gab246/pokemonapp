@@ -68,12 +68,33 @@ function loadList() {
 
 
   //shows modal to view pokemon details
-  // function showDetails (item){
-  //   pokemonRespository.loadDetails(item).then(function(){
-  //   showPokemonDetails(item);
-  //   });
-  // }  
+  function showDetails (item){
+    loadDetails(item).then(function(){
+    showDetailsModal(item);
+    });
+  }  
 
+function showDetailsModal (item){
+  let modalTitle= $(".modal-title");
+  let modalBody = $(".modal-body");
+  let modalButton = $("#button");
+  
+  modalTitle.empty();
+  modalBody.empty();
+
+  let name= $("<h1>" + item.name + "</h1>");
+  let detailHeight= $("<p>" + "height: " + item.height + "</p>");
+  let detailWeight = $("<p>" + "weight: " + item.weight + "</p>");
+  let imagefront = $('<img class="modal-img" src="' + item.imageUrlFront + '"/>');
+  let imageBack = $('<img class="modal-img" src="' + item.imageUrlBack + '"/>')
+
+
+modalTitle.append(name);
+modalBody.append(detailHeight);
+modalBody.append(detailWeight);
+modalBody.append(imagefront);
+modalBody.append(imageBack);
+modalButton.append(imageFront);
 
 }
 
