@@ -74,6 +74,7 @@ function loadList() {
     });
   }  
 
+  //information for each pokemon in modal
 function showDetailsModal (item){
   let modalTitle= $(".modal-title");
   let modalBody = $(".modal-body");
@@ -97,82 +98,6 @@ modalBody.append(imageBack);
 modalButton.append(imageFront);
 
 }
-
-
-//     pokemonRespository.loadDetails(item).then(function(){
-//     let modalContainer = document.querySelector('#modal-container');
-   
-//     // Clear all existing modal content
-//     modalContainer.innerHTML = '';
-
-    
-//     //createElements to display pokemon info
-//     let modal = document.createElement('div');
-//       modal.classList.add('modal');
-
-//     let titleElement = document.createElement('h1');
-//       titleElement.innerText = item.name;
-//       titleElement.classList.add('pokemonName');
-
-//     let detailHeight = document.createElement('p');
-//       detailHeight.innerText= `height: ${item.height}`;
-//       detailHeight.classList.add('pokemonHeight');
-      
-
-//     let detailWeight = document.createElement('p');
-//       detailWeight.innerText= `weight: ${item.weight}`;
-//       detailWeight.classList.add('pokemonWeight');
-
-//     let closeButton = document.createElement ('button');
-//       closeButton.classList.add('modal-close')
-//       closeButton.innerHTML= '&times;';
-//       closeButton.addEventListener('click', hideModal);
-
-//     let imageUrlBack= document.createElement('img');
-//     imageUrlBack.src= item.imageUrlBack;
-//     imageUrlBack.classList.add('imageUrlBack')
-
-  
-//     let imageUrlFront = document.createElement('img');
-//       imageUrlFront.src = item.imageUrlFront;
-//       imageUrlFront.classList.add('imageUrlFront');
-
-
-//     function hideModal(){
-//       let modalContainer = document.querySelector('#modal-container');
-//       modalContainer.classList.remove('is-visible')
-
-//     }
-//     //create all modal elements above
-//     modalContainer.appendChild(modal);
-//     modal.appendChild(closeButton);
-//     modal.appendChild(titleElement);
-//     modal.appendChild(detailHeight);
-//     modal.appendChild(detailWeight);
-//     modal.appendChild(imageUrlFront);
-//     modal.appendChild(imageUrlBack);
-
-//     modalContainer.classList.add('is-visible');
-
-   
-//     //esc out of modal using key
-//     window.addEventListener('keydown', function(e){
-//       let modalContainer= document.querySelector('#modal-container');
-//       if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')){
-//         hideModal();
-//       }
-//     });
-
-//     //click out of modal
-//     modalContainer.addEventListener('click', function(e){
-//       let target = e.target;
-//       if(target === modalContainer){
-//         hideModal();
-//       } 
-//     })
-  
-//     });
-// }
 
 
 return{
