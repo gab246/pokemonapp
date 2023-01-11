@@ -51,16 +51,16 @@ body{
 .modal-body {
     background:  #e2eee9;
     font-family: 'Martian Mono', 'sans-serif';
-    text-align: left;
-    
+    text-align: center;
+    font-size: 20px;
+    color:#696D7D;
 }
 
 .title{
     font-size: 60px;
     font-family: 'Martian Mono', 'sans-serif';
     color:#696D7D;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     padding-top: 120px;
     text-decoration: overline #8FC0A9;
 }
@@ -74,11 +74,11 @@ body{
     }
     
 .modal-title{
-   font-size: 40px; 
+   font-size: 20px; 
    font-family: 'Martian Mono', 'sans-serif';
    color:#696D7D;
-   /* display: flex;
-   justify-content: center; */
+
+
 }
 
 /* .pokemonHeight{
@@ -98,7 +98,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     width: 20%; 
-} */
+} */ 
 
 .pokemon-logo{
     height: 45px;
