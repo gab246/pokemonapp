@@ -2,7 +2,7 @@
 let pokemonRespository = (function () {
     // pokemonList defined as variable with key values as objects in an array
 let pokemonList = [];
-let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=25';
+let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=52';
 
 
 // function to add new pokemon to the pokemon list
